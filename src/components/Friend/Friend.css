@@ -1,0 +1,9 @@
+.profile-img {
+    width: 50%;
+    border: 3px solid #add8e6;
+    padding: 5px;
+    background-color: #fee15e;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
