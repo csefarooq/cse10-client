@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Friend from '../Friend/Friend';
-
+import img from '../../image/loading.gif';
+import './Friend.css'
 const Friends = () => {
     const [students, setStudents] = useState([]);
     useEffect(() => {
@@ -16,9 +17,12 @@ const Friends = () => {
             <h1 className="text-center mt-3">CSE 10th Batch - PUST</h1>
             <h3 className="text-center mb-3">Total Students: {students.length}</h3>
             <div className="row">
-            {
-                students.map(friend => <Friend friend={friend}></Friend>)
-            }
+                {
+                    students.length === 0 && <h6 className="text-center mt-5">Loading...</h6>
+                }
+                {
+                    students.map(friend => <Friend friend={friend}></Friend>)
+                }
             </div>
         </div>
     );
