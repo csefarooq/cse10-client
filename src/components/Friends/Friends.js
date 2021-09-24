@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Friend from '../Friend/Friend';
-import img from '../../image/loading.gif';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import './Friend.css'
 const Friends = () => {
     const [students, setStudents] = useState([]);
@@ -18,7 +19,14 @@ const Friends = () => {
             <h3 className="text-center mb-3">Total Students: {students.length}</h3>
             <div className="row">
                 {
-                    students.length === 0 && <h6 className="text-center mt-5">Loading...</h6>
+                    students.length === 0 && <div>
+                        <div className="d-flex justify-content-center mt-5">
+                            <Box sx={{ display: 'flex' }}>
+                                <CircularProgress />
+                            </Box>
+                        </div>
+                        <p className="text-center mt-2"><small>loading...</small></p>
+                    </div>
                 }
                 {
                     students.map(friend => <Friend friend={friend}></Friend>)

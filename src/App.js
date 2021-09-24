@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import AddFriend from './components/AddFriend/AddFriend';
 import NotFound from './components/NotFound/NotFound';
+import MangeFriend from './components/ManageFriend/MangeFriend';
 function App() {
   return (
     <Router>
@@ -18,6 +19,9 @@ function App() {
          </Route>
           <Route path="/addFriend">
            <AddFriend/>
+         </Route>
+         <Route path="/manageFriend">
+           <MangeFriend/>
          </Route>
          <Route path="*">
            <NotFound/>
