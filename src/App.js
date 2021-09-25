@@ -10,6 +10,7 @@ import {
 import AddFriend from './components/AddFriend/AddFriend';
 import NotFound from './components/NotFound/NotFound';
 import MangeFriend from './components/ManageFriend/MangeFriend';
+import UpdateStudentData from './components/UpdatStudentData/UpdateStudentData';
 function App() {
   return (
     <Router>
@@ -22,6 +23,9 @@ function App() {
          </Route>
          <Route path="/manageFriend">
            <MangeFriend/>
+         </Route>
+         <Route path="/updateStudentData">
+           <UpdateStudentData/>
          </Route>
          <Route path="*">
            <NotFound/>

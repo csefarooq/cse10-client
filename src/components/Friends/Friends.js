@@ -25,13 +25,16 @@ const Friends = () => {
                                 <CircularProgress />
                             </Box>
                         </div>
-                        <p className="text-center mt-2"><small>loading...</small></p>
+                        <h6 className="text-center mt-3">Loading...</h6>
                     </div>
                 }
                 {
                     students.map(friend => <Friend friend={friend}></Friend>)
                 }
             </div>
+            <footer className="mt-5">
+                <p className="text-center"><small>developed by: <a href="https://github.com/csefarooq">mojnu</a></small></p>
+            </footer>
         </div>
     );
 };
